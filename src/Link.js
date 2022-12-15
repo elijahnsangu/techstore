@@ -13,8 +13,17 @@ export const NextLinkComposed = React.forwardRef(function NextLinkComposed(
   props,
   ref
 ) {
-  const { to, linkAs, replace, scroll, shallow, prefetch, locale, ...other } =
-    props;
+  const {
+    to,
+    linkAs,
+    replace,
+    scroll,
+    shallow,
+    prefetch,
+    legacyBehavior = true,
+    locale,
+    ...other
+  } = props;
 
   return (
     <NextLink
@@ -25,6 +34,7 @@ export const NextLinkComposed = React.forwardRef(function NextLinkComposed(
       scroll={scroll}
       shallow={shallow}
       passHref
+      legacyBehavior={legacyBehavior}
       locale={locale}
     >
       <Anchor ref={ref} {...other} />
@@ -34,6 +44,7 @@ export const NextLinkComposed = React.forwardRef(function NextLinkComposed(
 
 NextLinkComposed.propTypes = {
   href: PropTypes.any,
+  legacyBehavior: PropTypes.bool,
   linkAs: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   locale: PropTypes.string,
   passHref: PropTypes.bool,
@@ -52,6 +63,7 @@ const Link = React.forwardRef(function Link(props, ref) {
     as,
     className: classNameProps,
     href,
+    legacyBehavior,
     linkAs: linkAsProp,
     locale,
     noLinkStyle,
@@ -89,6 +101,7 @@ const Link = React.forwardRef(function Link(props, ref) {
     scroll,
     shallow,
     prefetch,
+    legacyBehavior,
     locale,
   };
 
@@ -119,6 +132,7 @@ Link.propTypes = {
   as: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   className: PropTypes.string,
   href: PropTypes.any,
+  legacyBehavior: PropTypes.bool,
   linkAs: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   locale: PropTypes.string,
   noLinkStyle: PropTypes.bool,

@@ -1,19 +1,16 @@
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Head from 'next/head';
+import * as React from 'react';
+import Layout from '../components/ui/Layout';
 import Link from '../src/Link';
 
 export default function Index() {
   return (
-    <div>
-      <Head>
-        <title>Home page</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+    <Layout>
       <Container maxWidth="sm">
         <Box sx={{ my: 4 }}>
-          <Typography variant="h4" component="h1" gutterBottom>
+          <Typography variant="h3" component="h1" gutterBottom>
             Next.js example
           </Typography>
           <Link href="/about" color="secondary">
@@ -21,6 +18,6 @@ export default function Index() {
           </Link>
         </Box>
       </Container>
-    </div>
+    </Layout>
   );
 }
