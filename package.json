@@ -16,11 +16,6 @@
     "npm": "Please-use-yarn-to-install-this-package"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/server": "^11.4.0",
-    "@emotion/styled": "^11.9.3",
-    "@mui/icons-material": "^5.11.0",
-    "@mui/material": "^5.8.4",
     "@next/font": "^13.0.7",
     "next": "latest",
     "prop-types": "latest",
@@ -35,10 +30,13 @@
     "@babel/core": "^7.18.5",
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
+    "autoprefixer": "^10.4.13",
     "babel-loader": "^8.2.5",
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
     "husky": "^8.0.1",
-    "prettier": "2.7.1"
+    "postcss": "^8.4.21",
+    "prettier": "2.7.1",
+    "tailwindcss": "^3.2.4"
   }
 }
